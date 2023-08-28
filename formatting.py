@@ -23,7 +23,7 @@ def formatter(first_value, sign, second_value, sum = None):
     first_line = "{:>{}}".format(first_value, max_index_length) 
     output_lines.append(first_line)
 
-    second_line = "{}{:>{}}".format(sign,second_value, (max_index_length-1)) 
+    second_line = "{}{:>{}}".format(sign,second_value, (max_index_length-1)) #-1 counting the " "
     output_lines.append(second_line)
 
     dashes_line = "-" * (max_index_length)
@@ -32,7 +32,5 @@ def formatter(first_value, sign, second_value, sum = None):
     if sum != None:
         sum_line = "{:{}}".format(sum, max_index_length)
         output_lines.append(sum_line)
-
-    return output_lines  # Return the list of formatted lines
 
     return output_lines  # Return the list of formatted lines
