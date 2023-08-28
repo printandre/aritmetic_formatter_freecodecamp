@@ -19,7 +19,7 @@ def formatter(first_value, sign, second_value, sum = None):
     #len grater number + space + sign
     max_index_length = max(format_length_1, format_length_2) + 2 
 
-    #6 is the maximum due to 4 number cipher, space and sign
+    #6 is the maximum due to 4 number ciphers, space and sign
     first_line = "{:>{}}".format(first_value, max_index_length) 
     output_lines.append(first_line)
 
@@ -32,5 +32,7 @@ def formatter(first_value, sign, second_value, sum = None):
     if sum != None:
         sum_line = "{:{}}".format(sum, max_index_length)
         output_lines.append(sum_line)
+
+    return output_lines  # Return the list of formatted lines
 
     return output_lines  # Return the list of formatted lines
